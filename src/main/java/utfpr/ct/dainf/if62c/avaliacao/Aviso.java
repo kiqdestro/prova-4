@@ -1,5 +1,4 @@
 package utfpr.ct.dainf.if62c.avaliacao;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimerTask;
