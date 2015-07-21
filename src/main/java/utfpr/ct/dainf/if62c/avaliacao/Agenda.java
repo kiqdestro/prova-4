@@ -7,7 +7,7 @@ import java.util.Timer;
 /**
  * IF62C Fundamentos de Programação 2
  * Avaliação parcial.
- * @author 
+ * @author Nikito(Lucas Vale)
  */
 public class Agenda {
     private final String descricao;

@@ -7,7 +7,7 @@ import utfpr.ct.dainf.if62c.avaliacao.Compromisso;
 /**
  * IF62C Fundamentos de Programação 2
  * Avaliação parcial.
- * @author 
+ * @author Nikito(Lucas Vale)
  */
 public class Avaliacao4 {
  
