@@ -7,7 +7,7 @@ import java.util.Timer;
 /**
  * IF62C Fundamentos de Programação 2
  * Avaliação parcial.
- * @author Nikito(Lucas Vale)
+ * @author
  */
 public class Agenda {
     private final String descricao;
@@ -35,17 +35,14 @@ public class Agenda {
     }
     
     public void novoAviso(Compromisso compromisso, int antecedencia) {
-        //Criando o aviso
+        
         Aviso aviso = new Aviso(compromisso);
         
-        //Registrando o novo aviso na lista do compromisso
         compromisso.registraAviso(aviso);
         
-        //Capturando o horario do pc
         Date atual = new Date();
         atual.setTime(System.currentTimeMillis());
         
-        //Utilizando o timer para agendar o aviso
         timer.schedule(aviso, compromisso.getData().getTime() - atual.getTime() -
                 (antecedencia * 1000));
         
@@ -53,43 +50,34 @@ public class Agenda {
     
     public void novoAviso(Compromisso compromisso, int antecedencia, int intervalo) {
     
-        //Esse metodo é bem semelhante ao anterior porem agora há um intervalo de repetições
-        
-
-        //Criando o aviso
         Aviso aviso = new Aviso(compromisso);
         
-        //Registrando o novo aviso na lista do compromisso
         compromisso.registraAviso(aviso);
         
-        //Capturando o horario do pc
         Date atual = new Date();
         atual.setTime(System.currentTimeMillis());
         
-        //Utilizando o timer para agendar o aviso
         timer.schedule(aviso, compromisso.getData().getTime() - atual.getTime() - 
                 (antecedencia * 1000), (intervalo*1000));
       
     }
     
     public void cancela(Compromisso compromisso) {
-        //Percorrendo todos os avisos, cancelando-os
+        
         for(Aviso i : compromisso.getAvisos()){
             i.cancel();
         }
-        //Removendo um compromisso da agenda
         this.compromissos.remove(compromisso);
     }
     
     public void cancela(Aviso aviso) {
-        //Apagando o timer
+        
         aviso.cancel();
-        //Removendo o aviso do compromisso
         aviso.compromisso.getAvisos().remove(aviso);
     }
     
     public void destroi() {
-        //Todos os contadores estão relacionados ao timer global
+        
         timer.cancel();
     }
 }

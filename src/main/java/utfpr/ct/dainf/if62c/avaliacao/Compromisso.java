@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * IF62C Fundamentos de Programação 2
  * Avaliação parcial.
- * @author Nikito(Lucas Vale)
+ * @author
  */
 public class Compromisso {
     private Date data;
