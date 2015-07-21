@@ -15,7 +15,7 @@ public class AvisoFinal extends Aviso {
     public void run()
     {
         //Imprimindo na tela a mensagem do compromisso
-        System.out.println( compromisso.getDescricao() + " Começa Agora.");
+        System.out.println( compromisso.getDescricao() + " começa agora.");
         
         //Deletando todos os avisos relacionados a esse compromisso
         for(Aviso i : compromisso.getAvisos()){
