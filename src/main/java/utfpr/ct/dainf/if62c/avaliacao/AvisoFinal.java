@@ -11,4 +11,16 @@ public class AvisoFinal extends Aviso {
         super(compromisso);
     }
     
+    @Override
+    public void run()
+    {
+        //Imprimindo na tela a mensagem do compromisso
+        System.out.println( compromisso.getDescricao() + " Começa Agora.");
+        
+        //Deletando todos os avisos relacionados a esse compromisso
+        for(Aviso i : compromisso.getAvisos()){
+            i.cancel();
+        }  
+    }
+    
 }
